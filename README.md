@@ -7,7 +7,7 @@
     <img src="https://github.com/Alone-Mods.png" width="120" style="border-radius:50%;" alt="Profile Photo"/>
   </a>
 </p>
-> <span style="color:#FF6F61;">An awesome project by</span> @Alone-Mods(https://github.com/Alone-Mods) 💻
+> <span style="color:#FF6F61;">An awesome project by</span> <a href="https://github.com/Alone-Mods"> Alone-Mods 💻
 
 ---
 
