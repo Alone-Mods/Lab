@@ -37,4 +37,7 @@
 git clone https://github.com/Alone-Mods/Lab
 cd Lab
 ls
+gcc "your code"
 **Run the code that you want
+
+cp Lab "your_directory"
