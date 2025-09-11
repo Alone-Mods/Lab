@@ -8,13 +8,15 @@
   </a>
 </p>
 > <span style="color:#FF6F61;">An awesome project by</span> <a href="https://github.com/Alone-Mods"> Alone-Mods 💻
->Used to store all the important codes for exam purposes only..
+  
 ---
 
 ## 🎨 Features
 - 🌟 **Fast** and lightweight
 - 🎯 Easy to use
-- ⚡ Built for modern workflows  
+- ⚡ Built for modern workflows
+- ---
+## ⭐Used to store all the important codes for exam purposes only..
 
 ---
 
