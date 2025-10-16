@@ -1,0 +1,76 @@
+POLY ADD
+
+
+#include <stdio.h>
+
+#define MAX 100
+
+int main() {
+    int poly1[MAX][2], poly2[MAX][2], sum[MAX][2];
+    int n1, n2, i, j, k = 0;
+
+    // Input first polynomial
+    printf("Enter number of terms in first polynomial: ");
+    scanf("%d", &n1);
+    printf("Enter coefficient and exponent for each term (highest to lowest exponent):\n");
+    for (i = 0; i < n1; i++) {
+        scanf("%d %d", &poly1[i][0], &poly1[i][1]); // coeff, exp
+    }
+
+    // Input second polynomial
+    printf("Enter number of terms in second polynomial: ");
+    scanf("%d", &n2);
+    printf("Enter coefficient and exponent for each term (highest to lowest exponent):\n");
+    for (i = 0; i < n2; i++) {
+        scanf("%d %d", &poly2[i][0], &poly2[i][1]); // coeff, exp
+    }
+
+    // Polynomial addition
+    i = 0;
+    j = 0;
+    while (i < n1 && j < n2) {
+        if (poly1[i][1] > poly2[j][1]) { // higher exponent first
+            sum[k][0] = poly1[i][0];
+            sum[k][1] = poly1[i][1];
+            i++;
+            k++;
+        } else if (poly1[i][1] < poly2[j][1]) {
+            sum[k][0] = poly2[j][0];
+            sum[k][1] = poly2[j][1];
+            j++;
+            k++;
+        } else { // exponents are equal → add coefficients
+            sum[k][0] = poly1[i][0] + poly2[j][0];
+            sum[k][1] = poly1[i][1];
+            i++;
+            j++;
+            k++;
+        }
+    }
+
+    // Remaining terms
+    while (i < n1) {
+        sum[k][0] = poly1[i][0];
+        sum[k][1] = poly1[i][1];
+        i++;
+        k++;
+    }
+
+    while (j < n2) {
+        sum[k][0] = poly2[j][0];
+        sum[k][1] = poly2[j][1];
+        j++;
+        k++;
+    }
+
+    // Print resultant polynomial
+    printf("\nResultant Polynomial: ");
+    for (i = 0; i < k; i++) {
+        printf("%dx^%d", sum[i][0], sum[i][1]);
+        if (i < k - 1 && sum[i + 1][0] >= 0)
+            printf(" + ");
+    }
+    printf("\n");
+
+    return 0;
+}
